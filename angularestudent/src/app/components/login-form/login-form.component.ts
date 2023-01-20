@@ -3,6 +3,8 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
 
 import { LoginUser } from '../../models/LoginUser'
+import { AuthToken } from '../../models/AuthToken'
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-login-form',
@@ -23,10 +25,8 @@ export class LoginFormComponent {
     }
 
     onSubmit() {
-        let user: LoginUser = new LoginUser(this.inputEmail(), this.inputPassword());
-        console.log(this.inputPassword());
-        console.log(this.inputEmail());
-        this.loginService.login(user);
+        let user: LoginUser = new LoginUser(this.inputEmail().split('@')[0], this.inputEmail(), this.inputPassword());
+        let observable = this.loginService.login(user);
     }
 
     inputEmail() { return this.formControls.email?.value; }
