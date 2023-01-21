@@ -1,27 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from "./components/home-page/home-page.component";
-import { RegisterPageComponent } from "./components/register-page/register-page.component";
-import {LoginPageComponent} from "./components/login-page/login-page.component";
-import {MainPageComponent} from "./components/main-page/main-page.component";
-import {UniversityPageComponent} from "./components/university-page/university-page.component";
-import {AppealPageComponent} from "./components/appeal-page/appeal-page.component";
-import {ApprovalPageComponent} from "./components/approval-page/approval-page.component";
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { RegisterPageComponent } from './component/register-page/register-page.component';
+import { LoginPageComponent } from './component/login-page/login-page.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
+import { UniversityPageComponent } from './component/university-page/university-page.component';
+import { AppealPageComponent } from './component/appeal-page/appeal-page.component';
+import { ApprovalPageComponent } from './component/approval-page/approval-page.component';
+import {IsLoggedIn} from "./guard/IsLoggedIn";
+import {StudentAppealsPageComponent} from "./component/student-appeals-page/student-appeals-page.component";
+import {StudentsListPageComponent} from "./component/students-list-page/students-list-page.component";
+import {StudentApprovalPageComponent} from "./component/student-approval-page/student-approval-page.component";
+import {IsSuperUser} from "./guard/IsSuperUser";
 
 
 const routes: Routes = [
-    { path: '', component: HomePageComponent },
     { path: 'register', component: RegisterPageComponent },
     { path: 'login', component: LoginPageComponent },
-    { path: 'main', component: MainPageComponent },
-    { path: 'university', component: UniversityPageComponent },
-    { path: 'appeal', component: AppealPageComponent },
-    { path: 'approval', component: ApprovalPageComponent },
+    {path: '', canActivate:[IsLoggedIn], children: [
+        { path: '', component: HomePageComponent },
+        { path: 'landing', component: LandingPageComponent },
+        { path: 'university', component: UniversityPageComponent },
+        { path: 'appeal', component: AppealPageComponent },
+        { path: 'approval', component: ApprovalPageComponent },
+    ]},
+    {path: 'superuser', canActivate:[IsLoggedIn, IsSuperUser], children: [
+        { path: 'student-list', component: StudentsListPageComponent },
+        { path: 'student-appeals/:id_student', component: StudentAppealsPageComponent },
+        { path: 'student-approvals/:id_student', component: StudentApprovalPageComponent },
+    ]}
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

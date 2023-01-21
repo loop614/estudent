@@ -19,4 +19,3 @@ class Appeal(models.Model):
     graduation_test_result = models.CharField(max_length=256)
     datetime_created = models.DateTimeField(auto_created=True)
     datetime_updated = models.DateTimeField(auto_now=True)
-

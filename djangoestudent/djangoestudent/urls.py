@@ -17,17 +17,22 @@ from django.contrib import admin
 from django.urls import path, include
 
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.authtoken import views as authtoken_views
-from approval import views as approval_views
-from discipline import views as discipline_views
-from appeal import views as appeal_views
+from rest_framework_simplejwt.views import token_obtain_pair, token_verify, token_refresh
+from approval.views import GetApprovals
+from discipline.views import GetAllDisciplines
+from appeal.views import GetAppeals
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api-token-auth/', csrf_exempt(authtoken_views.obtain_auth_token)),
-    path('get-all-disciplines/<str:university>', csrf_exempt(discipline_views.GetAllDisciplines.as_view())),
-    path('get-approvals/<str:fk_student>', csrf_exempt(approval_views.GetApprovals.as_view())),
-    path('get-appeals/<str:fk_student>', csrf_exempt(appeal_views.GetAppeals.as_view()))
+    path('api-token-refresh/', csrf_exempt(token_refresh)),
+    path('api-token-verify/', csrf_exempt(token_verify)),
+    path('api-token-auth/', csrf_exempt(token_obtain_pair)),
+    path('get-all-disciplines/<str:university>',
+         csrf_exempt(GetAllDisciplines.as_view())),
+    path('get-approvals/<str:fk_student>',
+         csrf_exempt(GetApprovals.as_view())),
+    path('get-appeals/<str:fk_student>',
+         csrf_exempt(GetAppeals.as_view()))
 ]

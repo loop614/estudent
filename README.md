@@ -1,11 +1,19 @@
-#Quick Start
-python manage.py createsuperuser --username=loop --email=tony.kusic@gmail.com
-docker compose exec web python manage.py migrate --noinput
-POSTGRES_DB=estudent POSTGRES_USER=loop POSTGRES_PASSWORD=toor docker compose -f db/compose-postgres/docker-compose.yml up
-
 #Requirements
 docker (with compose)
+npm
+
+#Quick Start
+djangoestudent:
+    docker compose build
+    docker compose up
+    docker compose exec djangoestudent python manage.py makemigrations
+    docker compose exec djangoestudent python manage.py migrate --noinput
+    docker compose exec djangoestudent python manage.py createsuperuser --username=loop --email=tony.kusic@gmail.com
+
+angularestudent:
+    npm install
+    npm run start
 
 
-#About the db/
-many thanks to https://github.com/khezen/compose-postgres
+#TODOs:
+- separate djangoestudent and angularestudent into 2 github repos

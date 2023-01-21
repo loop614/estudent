@@ -1,108 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="51234211-4e3f-44f6-9ca4-7c7d2a056844" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../djangoestudent2/.idea/djangoestudent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/home-page/home-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/components/login-form/login-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/models/LoginUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/models/LoginUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/services/base.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/services/base.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/services/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/djangoestudent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoestudent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/appeal-page/appeal-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/appeal-page/appeal-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/appeal-page/appeal-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/appeal-page/appeal-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/appeal-page/appeal-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/appeal-page/appeal-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/approval-page/approval-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/approval-page/approval-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/approval-page/approval-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/approval-page/approval-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/approval-page/approval-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/approval-page/approval-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/home-page/home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/home-page/home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/home-page/home-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-form/login-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-form/login-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-form/login-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-form/login-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-form/login-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-form/login-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-page/login-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/landing-page/landing-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-page/login-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-page/login-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-page/login-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/main-page/main-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/login-page/login-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/main-page/main-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/landing-page/landing-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/main-page/main-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/landing-page/landing-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/navigation-bar/navigation-bar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/navigation-bar/navigation-bar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/navigation-bar/navigation-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/navigation-bar/navigation-bar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/navigation-bar/navigation-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/navigation-bar/navigation-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/register-form/register-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/register-form/register-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/register-form/register-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/register-form/register-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/register-form/register-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/register-form/register-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/register-page/register-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/register-page/register-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/register-page/register-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/register-page/register-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/university-page/university-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/university-page/university-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/university-page/university-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/university-page/university-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/components/university-page/university-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/component/university-page/university-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/models/AuthToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/model/AuthToken.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/models/LoginUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/model/LoginUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/model/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/services/base.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/service/base.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../angularestudent/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../angularestudent/src/app/service/login.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/__pycache__/settings.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/__pycache__/urls.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/__pycache__/wsgi.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/appeal/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/approval/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/discipline/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/student/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/subject/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/__pycache__/admin.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/__pycache__/apps.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/__pycache__/models.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/migrations/__pycache__/__init__.cpython-39.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/university/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/estudent/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoestudent/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoestudent/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +72,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/loop/projects/estudent/djangoestudent",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -172,22 +125,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674240568979</updated>
-      <workItem from="1674240572757" duration="2907000" />
+      <workItem from="1674240572757" duration="3158000" />
+      <workItem from="1674297176315" duration="1942000" />
+      <workItem from="1674301081848" duration="3452000" />
+      <workItem from="1674308505908" duration="972000" />
+      <workItem from="1674313462126" duration="298000" />
+      <workItem from="1674315996703" duration="415000" />
+      <workItem from="1674322828045" duration="3172000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/discipline/views.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

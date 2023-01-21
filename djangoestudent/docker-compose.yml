@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   web:
@@ -21,7 +21,8 @@ services:
       - POSTGRES_USER=estudent
       - POSTGRES_DB=estudent_dev
       - POSTGRES_PASSWORD=estudent
-
+    ports:
+      - 5432:5432
 
 volumes:
   postgresql_data:
