@@ -1,0 +1,7 @@
+POST localhost:8000/accounts/register
+Content-Type: application/json
+
+{
+    "username": "student1",
+    "password": "django110%"
+}

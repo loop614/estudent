@@ -1,0 +1,8 @@
+GET http://localhost:8000/get-all-appeals
+Accept: application/json
+
+GET http://localhost:8000/get-appeals/2
+Accept: application/json
+
+
+

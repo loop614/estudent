@@ -14,18 +14,24 @@ import { RegisterFormComponent } from './component/register-form/register-form.c
 import { LoginPageComponent } from './component/login-page/login-page.component';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
 import { NavigationBarComponent } from './component/navigation-bar/navigation-bar.component';
-import { UniversityPageComponent } from './component/university-page/university-page.component';
 import { AppealPageComponent } from './component/appeal-page/appeal-page.component';
 import { ApprovalPageComponent } from './component/approval-page/approval-page.component';
 import { StudentsListPageComponent } from './component/students-list-page/students-list-page.component';
-import { StudentAppealsPageComponent } from './component/student-appeals-page/student-appeals-page.component';
-import { StudentApprovalPageComponent } from './component/student-approval-page/student-approval-page.component';
 import { LoginService } from './service/login.service';
 import { Router } from '@angular/router';
 import { DisciplinesPageComponent } from './component/disciplines-page/disciplines-page.component';
 import { DisciplineService } from './service/discipline.service';
 import { SubjectsPageComponent } from './component/subjects-page/subjects-page.component';
 import { SubjectService } from './service/subject.service';
+import { LogoutPageComponent } from './component/logout-page/logout-page.component';
+import { AppealService } from './service/appeal.service';
+import { ApprovalService } from './service/approval.service';
+import { RegisterService } from './service/register.service';
+import { AdminAppealsPageComponent } from './component/admin-appeals-page/admin-appeals-page.component';
+import { AdminApprovalsPageComponent } from './component/admin-approvals-page/admin-approvals-page.component';
+import { AdminStudentListPageComponent } from './component/admin-student-list-page/admin-student-list-page.component';
+import { AdminAdminListPageComponent } from './component/admin-admin-list-page/admin-admin-list-page.component';
+import { UserService } from './service/user.service';
 
 @NgModule({
     declarations: [
@@ -37,14 +43,16 @@ import { SubjectService } from './service/subject.service';
         LoginPageComponent,
         LandingPageComponent,
         NavigationBarComponent,
-        UniversityPageComponent,
         AppealPageComponent,
         ApprovalPageComponent,
         StudentsListPageComponent,
-        StudentAppealsPageComponent,
-        StudentApprovalPageComponent,
         DisciplinesPageComponent,
         SubjectsPageComponent,
+        LogoutPageComponent,
+        AdminAppealsPageComponent,
+        AdminApprovalsPageComponent,
+        AdminStudentListPageComponent,
+        AdminAdminListPageComponent,
     ],
     imports: [
         BrowserModule,
@@ -54,7 +62,16 @@ import { SubjectService } from './service/subject.service';
         FormsModule,
         HttpClientModule,
     ],
-    providers: [SubjectService, DisciplineService, LoginService, Router],
+    providers: [
+        ApprovalService,
+        AppealService,
+        SubjectService,
+        DisciplineService,
+        UserService,
+        LoginService,
+        RegisterService,
+        Router,
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

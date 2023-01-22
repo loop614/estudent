@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { LoginService } from '../../service/login.service';
-
 import { LoginUser } from '../../model/LoginUser';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login-form',
@@ -29,7 +27,7 @@ export class LoginFormComponent {
             this.inputEmail(),
             this.inputPassword(),
         );
-        let observable = this.loginService.login(user);
+        this.loginService.login(user);
     }
 
     inputEmail() {

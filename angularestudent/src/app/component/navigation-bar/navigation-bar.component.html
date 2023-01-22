@@ -7,14 +7,40 @@
             >Disciplines</a
         >
         <a
+            *ngIf="!isUserAdmin"
             class="list-group-item list-group-item-action list-group-item-light p-3"
             href="appeal"
             >Appeals</a
         >
         <a
+            *ngIf="!isUserAdmin"
             class="list-group-item list-group-item-action list-group-item-light p-3"
             href="approval"
             >Approvals</a
+        >
+        <a
+            *ngIf="isUserAdmin"
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="admin-appeals-list"
+            >All Appeals</a
+        >
+        <a
+            *ngIf="isUserAdmin"
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="admin-approvals-list"
+            >All Approvals</a
+        >
+        <a
+            *ngIf="isUserAdmin"
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="admin-admins-list"
+            >List Admins</a
+        >
+        <a
+            *ngIf="isUserAdmin"
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="admin-students-list"
+            >List Students</a
         >
         <a
             class="list-group-item list-group-item-action list-group-item-light p-3"

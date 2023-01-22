@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework_simplejwt',
+    'rest_registration',
     'corsheaders',
     'student',
     'appeal',
@@ -90,6 +91,13 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:4200',
 ]
+
+REST_REGISTRATION = {
+    'REGISTER_VERIFICATION_URL': 'http://localhost:4200/verify-user/',
+    'RESET_PASSWORD_VERIFICATION_URL': 'http://localhost:4200/reset-password/',
+    'REGISTER_EMAIL_VERIFICATION_URL': 'http://localhost:4200/verify-email/',
+    'VERIFICATION_FROM_EMAIL': 'no-reply@example.com',
+}
 
 WSGI_APPLICATION = 'djangoestudent.wsgi.application'
 

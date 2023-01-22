@@ -1,0 +1,22 @@
+<div id="wrapper" class="d-flex">
+    <app-navigation-bar></app-navigation-bar>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper" class="container-fluid">
+        <!-- Page content-->
+        <h1 class="mt-4">Students:</h1>
+        <div *ngIf="isLoading" class="loading">
+            <div>Loading...</div>
+        </div>
+
+        <div *ngIf="!isLoading" class="subject-list">
+            <ul *ngFor="let listUser of allStudentListWraps">
+                <li>Last login: {{ listUser.fields.last_login }}</li>
+                <li>Username: {{ listUser.fields.username }}</li>
+                <li>First Name: {{ listUser.fields.first_name }}</li>
+                <li>Last Name: {{ listUser.fields.last_name }}</li>
+                <li>Is Active: {{ listUser.fields.is_active }}</li>
+                <li>Date joined: {{ listUser.fields.date_joined }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

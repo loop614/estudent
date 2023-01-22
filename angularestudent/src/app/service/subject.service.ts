@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BaseService } from './base.service';
-import { Discipline } from "../model/Discipline";
-
+import { Discipline } from '../model/Discipline';
 
 @Injectable()
 export class SubjectService extends BaseService {

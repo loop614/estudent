@@ -1,20 +1,25 @@
 from django.http import HttpResponse, JsonResponse
 from rest_framework import status
 
+from appeal.models import Appeal
 from .models import Approval
 from rest_framework.views import APIView
+from django.core import serializers
 
 
 class GetApprovals(APIView):
+    def get(self, request, id_user, *args, **kwargs) -> HttpResponse:
+        appeals = Appeal.objects.filter(fk_student=id_user)
+        fk_appeals = [appeal.pk for appeal in appeals]
+        approvals = Approval.objects.filter(fk_appeal__in=fk_appeals)
+        approvals_json = serializers.serialize("json", approvals)
+
+        return JsonResponse({'approvals': approvals_json})
+
+
+class GetAllApprovals(APIView):
     def get(self, request, *args, **kwargs) -> HttpResponse:
-        if 'fk_student' not in request.POST:
-            return JsonResponse({
-                'status': 'Bad request',
-                'message': 'Please provide the user email.'
-            }, status=status.HTTP_400_BAD_REQUEST)
+        approvals = Approval.objects.all()
+        approvals_json = serializers.serialize("json", approvals)
 
-        fk_student = request.data.GET.fk_student
-        approval = Approval.objects.select_related(
-            'fk_university').get(fk_student=fk_student)
-
-        return JsonResponse({'approvals': approval})
+        return JsonResponse({'approvals': approvals_json})

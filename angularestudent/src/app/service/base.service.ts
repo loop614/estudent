@@ -6,6 +6,10 @@ import { User } from '../model/User';
 @Injectable()
 export class BaseService {
     readonly baseUrl: string = 'http://localhost:8000/';
+    readonly estudentUserStorageKey = 'estudent_user';
+    readonly estudentAccessTokenStorageKey = 'estudent_refresh_token';
+    readonly estudentRefreshTokenStorageKey = 'estudent_access_token';
+
     jsonOptions: any;
 
     constructor(protected http: HttpClient, protected router: Router) {
@@ -25,8 +29,23 @@ export class BaseService {
     }
 
     public setTokenStorage(user: User): void {
-        localStorage.setItem('estudent_refresh_token', user.refresh);
-        localStorage.setItem('estudent_access_token', user.access);
+        localStorage.setItem(this.estudentRefreshTokenStorageKey, user.refresh);
+        localStorage.setItem(this.estudentAccessTokenStorageKey, user.access);
+    }
+
+    public getUserStorage(): User | null {
+        let estudentUser = localStorage.getItem(this.estudentUserStorageKey);
+        if (estudentUser === null) {
+            return null;
+        }
+
+        return JSON.parse(String(estudentUser));
+    }
+
+    public clearStorage(): void {
+        localStorage.removeItem(this.estudentUserStorageKey);
+        localStorage.removeItem(this.estudentAccessTokenStorageKey);
+        localStorage.removeItem(this.estudentRefreshTokenStorageKey);
     }
 
     protected handleError(message: string) {
@@ -34,15 +53,7 @@ export class BaseService {
     }
 
     protected setUserStorage(user: User) {
-        localStorage.setItem('estudent_user', JSON.stringify(user));
-    }
-
-    public getTokenStorage(): string | null {
-        return localStorage.getItem('estudent_access_token');
-    }
-
-    private clearTokenStorage(): void {
-        return localStorage.removeItem('estudent_token');
+        localStorage.setItem(this.estudentUserStorageKey, JSON.stringify(user));
     }
 
     private isTokenExpired(token: string): boolean {

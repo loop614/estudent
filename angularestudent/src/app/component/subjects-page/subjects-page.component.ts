@@ -1,29 +1,45 @@
 import { Component } from '@angular/core';
-import {SubjectService} from "../../service/subject.service";
-import {SubjectWrap} from "../../model/Subject";
+import { SubjectService } from '../../service/subject.service';
+import { SubjectWrap } from '../../model/Subject';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-subjects-page',
-  templateUrl: './subjects-page.component.html',
-  styleUrls: ['./subjects-page.component.css']
+    selector: 'app-subjects-page',
+    templateUrl: './subjects-page.component.html',
+    styleUrls: ['./subjects-page.component.css'],
 })
 export class SubjectsPageComponent {
     loading: boolean = false;
     subjectWraps: SubjectWrap[] = [];
     constructor(
-        private subjectService: SubjectService
+        private activatedRoute: ActivatedRoute,
+        private subjectService: SubjectService,
+        private router: Router,
     ) {}
 
     ngOnInit() {
         this.loading = true;
-        this.subjectService.getSubjects(1).subscribe(
+        let idDiscipline =
+            this.activatedRoute.snapshot.paramMap.get('id_discipline');
+        if (idDiscipline === null) {
+            this.router.navigate(['/landing']);
+        }
+        this.loadSubjectList(Number(idDiscipline));
+    }
+
+    private loadSubjectList(idDiscipline: number) {
+        if (idDiscipline === undefined) {
+            this.router.navigate(['/landing']);
+        }
+        idDiscipline = Number(idDiscipline);
+        this.subjectService.getSubjects(idDiscipline).subscribe(
             (data) => {
                 let response = JSON.parse(String(data));
-                this.subjectWraps = JSON.parse(response["subjects"]);
+                this.subjectWraps = JSON.parse(response['subjects']);
                 this.loading = false;
             },
             (error) => {
-                console.error(error)
+                console.error(error);
                 this.loading = false;
             },
         );

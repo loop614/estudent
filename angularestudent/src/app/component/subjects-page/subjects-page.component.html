@@ -10,17 +10,10 @@
 
         <div *ngIf="!isLoading" class="subject-list">
             <ul *ngFor="let subjectWrap of allSubjectWraps">
-                <li >
-                    {{ subjectWrap.fields.name }}
-                </li>
-                <li >
-                    {{ subjectWrap.fields.description }}
-                </li>
-                <li >
-                    {{ subjectWrap.fields.ects }}
-                </li>
+                <li>Name: {{ subjectWrap.fields.name }}</li>
+                <li>Description: {{ subjectWrap.fields.description }}</li>
+                <li>ECTS: {{ subjectWrap.fields.ects }}</li>
             </ul>
         </div>
     </div>
-
 </div>
