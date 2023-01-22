@@ -14,6 +14,7 @@ class GetAppeals(APIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
         fk_student = request.data.GET.fk_student
-        appeals = Appeal.objects.select_related('fk_university').get(fk_student=fk_student)
+        appeals = Appeal.objects.select_related(
+            'fk_university').get(fk_student=fk_student)
 
         return JsonResponse({'appeals': appeals})

@@ -3,7 +3,6 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { LoginService } from '../../service/login.service';
 
 import { LoginUser } from '../../model/LoginUser';
-import { AuthToken } from '../../model/AuthToken';
 import { Router } from '@angular/router';
 
 @Component({

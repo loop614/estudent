@@ -13,23 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path, include
 
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework_simplejwt.views import token_obtain_pair, token_verify, token_refresh
+from rest_framework_simplejwt.views import token_verify, token_refresh
+from estudent_simplejwt.views import EstudentObtainPairView
 from approval.views import GetApprovals
 from discipline.views import GetAllDisciplines
 from appeal.views import GetAppeals
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-token-auth/', csrf_exempt(EstudentObtainPairView.as_view())),
     path('api-token-refresh/', csrf_exempt(token_refresh)),
     path('api-token-verify/', csrf_exempt(token_verify)),
-    path('api-token-auth/', csrf_exempt(token_obtain_pair)),
-    path('get-all-disciplines/<str:university>',
+    path('get-all-discipline.json/<str:university>',
          csrf_exempt(GetAllDisciplines.as_view())),
     path('get-approvals/<str:fk_student>',
          csrf_exempt(GetApprovals.as_view())),

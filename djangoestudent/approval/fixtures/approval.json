@@ -1,0 +1,22 @@
+[
+  {
+    "model": "approval.approval",
+    "pk": 1,
+    "fields": {
+      "fk_admin_id": 1,
+      "fk_appeal_id": 1,
+      "date_created": "2023-01-01",
+      "date_updated": "2023-01-01"
+    }
+  },
+  {
+    "model": "approval.approval",
+    "pk": 2,
+    "fields": {
+      "fk_admin_id": 1,
+      "fk_appeal_id": 2,
+      "date_created": "2023-01-01",
+      "date_updated": "2023-01-01"
+    }
+  }
+]

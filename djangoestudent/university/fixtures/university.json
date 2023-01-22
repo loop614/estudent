@@ -1,0 +1,9 @@
+[
+  {
+    "model": "university.university",
+    "pk": 1,
+    "fields": {
+      "name": "university of The Falcon Technology"
+    }
+  }
+]

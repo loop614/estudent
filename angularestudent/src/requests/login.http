@@ -1,4 +1,3 @@
-### Send POST request with json body
 POST localhost:8000/api-token-auth/
 Content-Type: application/json
 

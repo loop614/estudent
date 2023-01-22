@@ -1,0 +1,70 @@
+[
+  {
+    "model": "appeal.appeal",
+    "pk": 1,
+    "fields": {
+      "fk_student_id": 2,
+      "fk_discipline_id": 1,
+      "date_of_birth": "2000-01-01",
+      "place_of_birth": "Zagreb",
+      "finished_school": "Finished School",
+      "cover_letter": "Cover letter",
+      "finished_school_file_path": "mydomain.example/files/1",
+      "average_grade": 1.1,
+      "graduation_test_result": 1.1,
+      "datetime_created": "2023-01-01 10:00:00",
+      "datetime_updated": "2023-01-01 10:00:00"
+    }
+  },
+  {
+    "model": "appeal.appeal",
+    "pk": 2,
+    "fields": {
+      "fk_student_id": 3,
+      "fk_discipline_id": 2,
+      "date_of_birth": "2000-02-02",
+      "place_of_birth": "Varazdin",
+      "finished_school": "Finished School",
+      "cover_letter": "Cover letter",
+      "finished_school_file_path": "mydomain.example/files/2",
+      "average_grade": 2.2,
+      "graduation_test_result": 2.2,
+      "datetime_created": "2023-01-01 10:00:00",
+      "datetime_updated": "2023-01-01 10:00:00"
+    }
+  },
+  {
+    "model": "appeal.appeal",
+    "pk": 3,
+    "fields": {
+      "fk_student_id": 4,
+      "fk_discipline_id": 2,
+      "date_of_birth": "2000-03-03",
+      "place_of_birth": "Krapina",
+      "finished_school": "Finished School",
+      "cover_letter": "Cover letter",
+      "finished_school_file_path": "mydomain.example/files/2",
+      "average_grade": 3.3,
+      "graduation_test_result": 3.3,
+      "datetime_created": "2023-01-01 10:00:00",
+      "datetime_updated": "2023-01-01 10:00:00"
+    }
+  },
+  {
+    "model": "appeal.appeal",
+    "pk": 4,
+    "fields": {
+      "fk_student_id": 4,
+      "fk_discipline_id": 3,
+      "date_of_birth": "2000-03-03",
+      "place_of_birth": "Krapina",
+      "finished_school": "Finished School",
+      "cover_letter": "Cover letter",
+      "finished_school_file_path": "mydomain.example/files/2",
+      "average_grade": 4.4,
+      "graduation_test_result": 4.4,
+      "datetime_created": "2023-01-01 10:00:00",
+      "datetime_updated": "2023-01-01 10:00:00"
+    }
+  }
+]

@@ -1,14 +1,24 @@
 export class User {
     idUser: number = 0;
+    refresh: string = '';
+    access: string = '';
     email: string = '';
-    name: string = '';
+    username: string = '';
     isSuperUser: boolean = false;
 
-    constructor(idUser: number, email: string, name: string, isSuperUser: boolean)
-    {
+    constructor(
+        idUser: number,
+        refresh: string,
+        access: string,
+        email: string,
+        username: string,
+        isSuperUser: boolean,
+    ) {
         this.idUser = idUser;
+        this.refresh = refresh;
+        this.access = access;
         this.email = email;
-        this.name = name;
+        this.username = username;
         this.isSuperUser = isSuperUser;
     }
 }

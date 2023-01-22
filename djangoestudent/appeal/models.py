@@ -2,12 +2,12 @@ from django.db import models
 
 from django.db import models
 
-from student.models import Student
+from django.contrib.auth.models import User
 from discipline.models import Discipline
 
 
 class Appeal(models.Model):
-    fk_student = models.ForeignKey(Student, on_delete=models.DO_NOTHING)
+    fk_student = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     fk_discipline = models.ForeignKey(Discipline, on_delete=models.DO_NOTHING)
 
     date_of_birth = models.DateField()

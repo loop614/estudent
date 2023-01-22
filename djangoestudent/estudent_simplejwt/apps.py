@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StudentConfig(AppConfig):
+class EstudentSimplejwtConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'student'
+    name = 'estudent_simplejwt'

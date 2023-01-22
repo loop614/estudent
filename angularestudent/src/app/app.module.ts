@@ -20,6 +20,8 @@ import { ApprovalPageComponent } from './component/approval-page/approval-page.c
 import { StudentsListPageComponent } from './component/students-list-page/students-list-page.component';
 import { StudentAppealsPageComponent } from './component/student-appeals-page/student-appeals-page.component';
 import { StudentApprovalPageComponent } from './component/student-approval-page/student-approval-page.component';
+import { LoginService } from './service/login.service';
+import { Router } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -46,7 +48,7 @@ import { StudentApprovalPageComponent } from './component/student-approval-page/
         FormsModule,
         HttpClientModule,
     ],
-    providers: [],
+    providers: [LoginService, Router],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

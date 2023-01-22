@@ -1,0 +1,29 @@
+[
+  {
+    "model": "discipline.discipline",
+    "pk": 1,
+    "fields": {
+      "fk_university_id": 1,
+      "name": "technology",
+      "quote": 20
+    }
+  },
+  {
+    "model": "discipline.discipline",
+    "pk": 2,
+    "fields": {
+      "fk_university_id": 1,
+      "name": "informatics",
+      "quote": 120
+    }
+  },
+  {
+    "model": "discipline.discipline",
+    "pk": 3,
+    "fields": {
+      "fk_university_id": 1,
+      "name": "mathematics",
+      "quote": 10
+    }
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "model": "subject.subject",
+    "pk": 1,
+    "fields": {
+      "fk_discipline_id": 1,
+      "name": "technology1",
+      "description": "intro to technology",
+      "ects": 30
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 2,
+    "fields": {
+      "fk_discipline_id": 1,
+      "name": "technology2",
+      "description": "technology",
+      "ects": 20
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 3,
+    "fields": {
+      "fk_discipline_id": 1,
+      "name": "technology3",
+      "description": "advanced technology",
+      "ects": 10
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 4,
+    "fields": {
+      "fk_discipline_id": 2,
+      "name": "informatics1",
+      "description": "intro to informatics",
+      "ects": 30
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 5,
+    "fields": {
+      "fk_discipline_id": 2,
+      "name": "informatics2",
+      "description": "intromatics",
+      "ects": 20
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 6,
+    "fields": {
+      "fk_discipline_id": 2,
+      "name": "intromatics3",
+      "description": "advanced intromatics",
+      "ects": 10
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 7,
+    "fields": {
+      "fk_discipline_id": 3,
+      "name": "mathematics1",
+      "description": "intro to mathematics",
+      "ects": 30
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 8,
+    "fields": {
+      "fk_discipline_id": 3,
+      "name": "mathematics2",
+      "description": "mathematics",
+      "ects": 20
+    }
+  },
+  {
+    "model": "subject.subject",
+    "pk": 9,
+    "fields": {
+      "fk_discipline_id": 3,
+      "name": "mathematics3",
+      "description": "advanced mathematics",
+      "ects": 10
+    }
+  }
+]

@@ -1,19 +1,31 @@
-#Requirements
-docker (with compose)
-npm
+## Requirements
+- docker (with compose)
+- node with npm
 
-#Quick Start
-djangoestudent:
-    docker compose build
-    docker compose up
-    docker compose exec djangoestudent python manage.py makemigrations
-    docker compose exec djangoestudent python manage.py migrate --noinput
-    docker compose exec djangoestudent python manage.py createsuperuser --username=loop --email=tony.kusic@gmail.com
+## Quick Start Django App
+```console
+$ cd djangoestudent
+$ docker compose build
+$ docker compose up
+$ docker compose exec web python manage.py makemigrations
+$ docker compose exec web python manage.py migrate --noinput
+$ docker compose exec web python manage.py createsuperuser --noinput
+$ docker compose exec web python manage.py loaddata fixtures/user.json
+$ docker compose exec web python manage.py loaddata */fixtures/*.json
+```
 
-angularestudent:
-    npm install
-    npm run start
+## Quick Start Angular App
+```console
+$ cd angularestudent
+$ npm install
+$ npm run start
+```
 
+## Example users:
+    - admin / admin
+    - student1 / django110%
+    - student2 / django110%
 
-#TODOs:
-- separate djangoestudent and angularestudent into 2 github repos
+## TODOs:
+    - separate djangoestudent and angularestudent into 2 github repos
+    - move birth data from appeal to user
