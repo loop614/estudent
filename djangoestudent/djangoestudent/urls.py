@@ -18,8 +18,10 @@ from django.urls import path, include
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework_simplejwt.views import token_verify, token_refresh
 from estudent_simplejwt.views import EstudentObtainPairView
+from university.views import GetAllUniversities
 from approval.views import GetApprovals
 from discipline.views import GetAllDisciplines
+from subject.views import GetSubjects
 from appeal.views import GetAppeals
 
 
@@ -28,10 +30,14 @@ urlpatterns = [
     path('api-token-auth/', csrf_exempt(EstudentObtainPairView.as_view())),
     path('api-token-refresh/', csrf_exempt(token_refresh)),
     path('api-token-verify/', csrf_exempt(token_verify)),
-    path('get-all-discipline.json/<str:university>',
+    path('get-all-universities/',
+         csrf_exempt(GetAllUniversities.as_view())),
+    path('get-all-disciplines/<int:id_university>',
          csrf_exempt(GetAllDisciplines.as_view())),
-    path('get-approvals/<str:fk_student>',
+    path('get-subjects/<int:id_discipline>',
+         csrf_exempt(GetSubjects.as_view())),
+    path('get-approvals/<int:fk_student>',
          csrf_exempt(GetApprovals.as_view())),
-    path('get-appeals/<str:fk_student>',
+    path('get-appeals/<int:fk_student>',
          csrf_exempt(GetAppeals.as_view()))
 ]

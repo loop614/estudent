@@ -4,7 +4,6 @@ import { HomePageComponent } from './component/home-page/home-page.component';
 import { RegisterPageComponent } from './component/register-page/register-page.component';
 import { LoginPageComponent } from './component/login-page/login-page.component';
 import { LandingPageComponent } from './component/landing-page/landing-page.component';
-import { UniversityPageComponent } from './component/university-page/university-page.component';
 import { AppealPageComponent } from './component/appeal-page/appeal-page.component';
 import { ApprovalPageComponent } from './component/approval-page/approval-page.component';
 import { IsLoggedIn } from './guard/IsLoggedIn';
@@ -12,6 +11,8 @@ import { StudentAppealsPageComponent } from './component/student-appeals-page/st
 import { StudentsListPageComponent } from './component/students-list-page/students-list-page.component';
 import { StudentApprovalPageComponent } from './component/student-approval-page/student-approval-page.component';
 import { IsSuperUser } from './guard/IsSuperUser';
+import { DisciplinesPageComponent } from './component/disciplines-page/disciplines-page.component';
+import { SubjectsPageComponent } from './component/subjects-page/subjects-page.component';
 
 const routes: Routes = [
     { path: 'register', component: RegisterPageComponent },
@@ -24,9 +25,15 @@ const routes: Routes = [
         providers: [IsLoggedIn],
     },
     {
-        path: 'university',
+        path: 'disciplines',
         canActivate: [IsLoggedIn],
-        component: UniversityPageComponent,
+        component: DisciplinesPageComponent,
+        providers: [IsLoggedIn],
+    },
+    {
+        path: 'subjects/:id_discipline',
+        canActivate: [IsLoggedIn],
+        component: SubjectsPageComponent,
         providers: [IsLoggedIn],
     },
     {

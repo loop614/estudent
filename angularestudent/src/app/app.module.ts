@@ -22,6 +22,10 @@ import { StudentAppealsPageComponent } from './component/student-appeals-page/st
 import { StudentApprovalPageComponent } from './component/student-approval-page/student-approval-page.component';
 import { LoginService } from './service/login.service';
 import { Router } from '@angular/router';
+import { DisciplinesPageComponent } from './component/disciplines-page/disciplines-page.component';
+import { DisciplineService } from './service/discipline.service';
+import { SubjectsPageComponent } from './component/subjects-page/subjects-page.component';
+import { SubjectService } from './service/subject.service';
 
 @NgModule({
     declarations: [
@@ -39,6 +43,8 @@ import { Router } from '@angular/router';
         StudentsListPageComponent,
         StudentAppealsPageComponent,
         StudentApprovalPageComponent,
+        DisciplinesPageComponent,
+        SubjectsPageComponent,
     ],
     imports: [
         BrowserModule,
@@ -48,7 +54,7 @@ import { Router } from '@angular/router';
         FormsModule,
         HttpClientModule,
     ],
-    providers: [LoginService, Router],
+    providers: [SubjectService, DisciplineService, LoginService, Router],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

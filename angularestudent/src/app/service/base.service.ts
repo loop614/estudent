@@ -29,6 +29,10 @@ export class BaseService {
         localStorage.setItem('estudent_access_token', user.access);
     }
 
+    protected handleError(message: string) {
+        console.error(message);
+    }
+
     protected setUserStorage(user: User) {
         localStorage.setItem('estudent_user', JSON.stringify(user));
     }

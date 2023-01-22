@@ -1,8 +1,10 @@
 ## Requirements
+
 - docker (with compose)
 - node with npm
 
 ## Quick Start Django App
+
 ```console
 $ cd djangoestudent
 $ docker compose build
@@ -15,6 +17,7 @@ $ docker compose exec web python manage.py loaddata */fixtures/*.json
 ```
 
 ## Quick Start Angular App
+
 ```console
 $ cd angularestudent
 $ npm install
@@ -22,10 +25,12 @@ $ npm run start
 ```
 
 ## Example users:
-    - admin / admin
-    - student1 / django110%
-    - student2 / django110%
+
+    - admin@example.com / admin
+    - student1@example.com / django110%
+    - student2@example.com / django110%
 
 ## TODOs:
+
     - separate djangoestudent and angularestudent into 2 github repos
     - move birth data from appeal to user
