@@ -1,3 +1,7 @@
 #registerForm {
     width: 22rem;
 }
+
+.server-error-message {
+    color: red;
+}

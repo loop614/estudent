@@ -32,6 +32,8 @@ import { AdminApprovalsPageComponent } from './component/admin-approvals-page/ad
 import { AdminStudentListPageComponent } from './component/admin-student-list-page/admin-student-list-page.component';
 import { AdminAdminListPageComponent } from './component/admin-admin-list-page/admin-admin-list-page.component';
 import { UserService } from './service/user.service';
+import { DisciplineApplicationPageComponent } from './component/discipline-application-page/discipline-application-page.component';
+import { DisciplinesApplicationFormComponent } from './component/disciplines-application-form/disciplines-application-form.component';
 
 @NgModule({
     declarations: [
@@ -53,6 +55,8 @@ import { UserService } from './service/user.service';
         AdminApprovalsPageComponent,
         AdminStudentListPageComponent,
         AdminAdminListPageComponent,
+        DisciplineApplicationPageComponent,
+        DisciplinesApplicationFormComponent,
     ],
     imports: [
         BrowserModule,

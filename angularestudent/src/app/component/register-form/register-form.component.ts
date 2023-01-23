@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterUser } from '../../model/RegisterUser';
 import { RegisterService } from '../../service/register.service';
+import { User } from '../../model/User';
+import { Router } from '@angular/router';
+import { LoginService } from '../../service/login.service';
 
 @Component({
     selector: 'app-register-form',
@@ -10,9 +13,12 @@ import { RegisterService } from '../../service/register.service';
 })
 export class RegisterFormComponent {
     registerForm: any = FormGroup;
+    serverErrorMessage: string = '';
     constructor(
         private formBuilder: FormBuilder,
         private registerService: RegisterService,
+        private loginService: LoginService,
+        private router: Router,
     ) {
         this.registerForm = this.formBuilder.group({
             first_name: ['', [Validators.required]],
@@ -32,7 +38,30 @@ export class RegisterFormComponent {
             this.inputName(),
             this.inputLastName(),
         );
-        this.registerService.register(user);
+        this.registerService.register(user).subscribe(
+            (data) => {
+                this.serverErrorMessage = '';
+                let user: User = JSON.parse(String(data));
+                this.loginService.setTokenStorage(user);
+                this.loginService.setUserStorage(user);
+                console.log(data);
+                this.router.navigate(['/landing', {}]);
+            },
+            (error) => {
+                if (error.status !== 400) {
+                    console.error('Server Error on register.');
+                    this.router.navigateByUrl('/login');
+                    return;
+                }
+                let errorJson = JSON.parse(error.error);
+
+                for (const [key, value] of Object.entries(errorJson)) {
+                    // @ts-ignore
+                    this.serverErrorMessage =
+                        'Please check the field ' + key + ': ' + value[0];
+                }
+            },
+        );
     }
 
     inputEmail() {
@@ -52,5 +81,9 @@ export class RegisterFormComponent {
     }
     get formControls() {
         return this.registerForm.controls;
+    }
+
+    get errorMessage() {
+        return this.serverErrorMessage;
     }
 }

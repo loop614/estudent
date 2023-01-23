@@ -1,2 +1,23 @@
+POST localhost:8000/create-appeal/
+Content-Type: application/json
+
+{
+    "id_user": 3,
+    "id_discipline": 2,
+    "date_of_birth": "2000-10-10",
+    "place_of_birth": "Zagreb",
+    "cover_letter": "Amazing cover letter",
+    "average_grade": 15.15,
+    "graduation_test_result": 14.14,
+    "finished_school": "middle school X15",
+    "finished_school_file_path": "file content"
+}
+
+
+GET http://localhost:8000/get-discipline/1
+Accept: application/json
+
+
 GET http://localhost:8000/get-disciplines/1
 Accept: application/json
+

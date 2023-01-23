@@ -16,6 +16,7 @@ import { AdminAppealsPageComponent } from './component/admin-appeals-page/admin-
 import { AdminApprovalsPageComponent } from './component/admin-approvals-page/admin-approvals-page.component';
 import { AdminAdminListPageComponent } from './component/admin-admin-list-page/admin-admin-list-page.component';
 import { AdminStudentListPageComponent } from './component/admin-student-list-page/admin-student-list-page.component';
+import { DisciplineApplicationPageComponent } from './component/discipline-application-page/discipline-application-page.component';
 
 const routes: Routes = [
     { path: 'register', component: RegisterPageComponent },
@@ -32,6 +33,12 @@ const routes: Routes = [
         path: 'disciplines',
         canActivate: [IsLoggedIn],
         component: DisciplinesPageComponent,
+        providers: [IsLoggedIn],
+    },
+    {
+        path: 'discipline/apply/:id_discipline',
+        canActivate: [IsLoggedIn],
+        component: DisciplineApplicationPageComponent,
         providers: [IsLoggedIn],
     },
     {

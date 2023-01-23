@@ -1,0 +1,23 @@
+<div id="wrapper" class="d-flex">
+    <app-navigation-bar></app-navigation-bar>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper" class="container-fluid">
+        <!-- Page content-->
+
+        <div *ngIf="isLoading" class="loading">
+            <div>Loading...</div>
+        </div>
+
+        <div *ngIf="!isLoading">
+            <h1 class="mt-4">Apply for {{selectedDiscipline.name}} :</h1>
+            <div
+                class="d-flex justify-content-center mt-2"
+                role="main"
+                xmlns="http://www.w3.org/1999/html"
+            >
+                <app-disciplines-application-form></app-disciplines-application-form>
+            </div>
+        </div>
+    </div>
+</div>
+

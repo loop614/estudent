@@ -1,0 +1,202 @@
+<div class="form-outline mb-4">
+    <form id="disciplinesApplicationForm" [formGroup]="disciplinesApplicationForm" (ngSubmit)="onSubmit()">
+        <!-- Date of birth -->
+        <div class="form-outline mb-4">
+            <input
+                id="date_of_birth"
+                name="date_of_birth"
+                class="form-control"
+                required
+                formControlName="date_of_birth"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.date_of_birth.dirty && formControls.date_of_birth.errors
+                }"
+            />
+            <div
+                *ngIf="formControls.date_of_birth.dirty && formControls.date_of_birth.errors"
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.email.errors.required">
+                    Date of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="date_of_birth">Date of birth</label>
+        </div>
+
+        <!-- Place of birth -->
+        <div class="form-outline mb-4">
+            <input
+                id="place_of_birth"
+                name="place_of_birth"
+                class="form-control"
+                required
+                formControlName="place_of_birth"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.place_of_birth.dirty &&
+                        formControls.place_of_birth.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.place_of_birth.dirty && formControls.place_of_birth.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="place_of_birth">Place of birth</label>
+        </div>
+
+        <!-- Finished school -->
+        <div class="form-outline mb-4">
+            <input
+                id="finished_school"
+                name="finished_school"
+                class="form-control"
+                required
+                formControlName="finished_school"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.finished_school.dirty &&
+                        formControls.finished_school.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.finished_school.dirty && formControls.finished_school.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="finished_school">Finished school</label>
+        </div>
+
+
+        <!-- Finished school file -->
+        <div class="form-outline mb-4">
+            <input
+                id="finished_school_file_path"
+                type="file"
+                name="finished_school_file_path"
+                class="form-control"
+                required
+                formControlName="finished_school_file_path"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.finished_school_file_path.dirty &&
+                        formControls.finished_school_file_path.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.finished_school_file_path.dirty && formControls.finished_school_file_path.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="finished_school_file_path">Finished school file</label>
+        </div>
+
+        <!-- Cover letter -->
+        <div class="form-outline mb-4">
+            <input
+                id="cover_letter"
+                name="cover_letter"
+                class="form-control rounded-0"
+                required
+                formControlName="cover_letter"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.cover_letter.dirty &&
+                        formControls.cover_letter.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.cover_letter.dirty && formControls.cover_letter.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="cover_letter">Cover letter</label>
+        </div>
+
+        <!-- Grade average -->
+        <div class="form-outline mb-4">
+            <input
+                id="average_grade"
+                name="average_grade"
+                class="form-control"
+                required
+                formControlName="average_grade"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.average_grade.dirty &&
+                        formControls.average_grade.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.average_grade.dirty && formControls.average_grade.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="average_grade">Grade Average</label>
+        </div>
+
+        <!-- Graduation test result -->
+        <div class="form-outline mb-4">
+            <input
+                id="graduation_test_result"
+                name="graduation_test_result"
+                class="form-control"
+                required
+                formControlName="graduation_test_result"
+                [ngClass]="{
+                    'is-invalid':
+                        formControls.graduation_test_result.dirty &&
+                        formControls.graduation_test_result.errors
+                }"
+            />
+            <div
+                *ngIf="
+                    formControls.graduation_test_result.dirty && formControls.graduation_test_result.errors
+                "
+                class="invalid-feedback"
+            >
+                <div *ngIf="formControls.password.errors.required">
+                    Place of birth is required
+                </div>
+            </div>
+            <label class="form-label" for="graduation_test_result">Graduation test result</label>
+        </div>
+
+        <div *ngIf="serverErrorMessage !== ''" class="server-error-message">
+            <p>
+                {{ errorMessage }}
+            </p>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn button btn-primary btn-block mb-4">
+            Apply
+        </button>
+    </form>
+</div>

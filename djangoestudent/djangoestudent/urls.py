@@ -21,10 +21,10 @@ from rest_framework_simplejwt.views import token_verify, token_refresh
 from estudent_simplejwt.views import EstudentObtainPairView
 from estudent_user.views import GetAllAdmins, GetAllStudents
 from university.views import GetAllUniversities
-from discipline.views import GetDisciplines
+from discipline.views import GetDisciplines, GetDiscipline
 from subject.views import GetSubjects
 from approval.views import GetAllApprovals, GetApprovals
-from appeal.views import GetAllAppeals, GetAppeals
+from appeal.views import GetAllAppeals, GetAppeals, CreateAppeal
 
 
 urlpatterns = [
@@ -37,8 +37,12 @@ urlpatterns = [
 
     path('get-all-universities/',
          csrf_exempt(GetAllUniversities.as_view())),
+    path('get-discipline/<int:id_discipline>',
+         csrf_exempt(GetDiscipline.as_view())),
     path('get-disciplines/<int:id_university>',
          csrf_exempt(GetDisciplines.as_view())),
+    path('create-appeal/',
+         csrf_exempt(CreateAppeal.as_view())),
     path('get-subjects/<int:id_discipline>',
          csrf_exempt(GetSubjects.as_view())),
 

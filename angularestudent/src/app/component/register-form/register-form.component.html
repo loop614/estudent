@@ -159,6 +159,12 @@
             <label class="form-label" for="password">Password</label>
         </div>
 
+        <div *ngIf="serverErrorMessage !== ''" class="server-error-message">
+            <p>
+                {{ errorMessage }}
+            </p>
+        </div>
+
         <!-- 2 column grid layout for inline styling -->
         <div class="row mb-4">
             <div class="col d-flex justify-content-center">

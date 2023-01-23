@@ -48,12 +48,12 @@ export class BaseService {
         localStorage.removeItem(this.estudentRefreshTokenStorageKey);
     }
 
-    protected handleError(message: string) {
-        console.error(message);
+    public setUserStorage(user: User) {
+        localStorage.setItem(this.estudentUserStorageKey, JSON.stringify(user));
     }
 
-    protected setUserStorage(user: User) {
-        localStorage.setItem(this.estudentUserStorageKey, JSON.stringify(user));
+    protected handleError(message: string) {
+        console.error(message);
     }
 
     private isTokenExpired(token: string): boolean {

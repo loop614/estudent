@@ -33,6 +33,7 @@ $ npm run start
 ## TODOs:
 
     - separate djangoestudent and angularestudent into 2 github repos
+    - improve security of djago app
     - delete empty files
     - move birth data from appeal to user
-    - improve security of admin routes ( with django user roles ? )
+    - other functionalities...

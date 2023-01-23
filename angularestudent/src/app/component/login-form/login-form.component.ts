@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { LoginService } from '../../service/login.service';
 import { LoginUser } from '../../model/LoginUser';
+import { User } from '../../model/User';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-login-form',
@@ -11,8 +13,10 @@ import { LoginUser } from '../../model/LoginUser';
 })
 export class LoginFormComponent {
     loginForm: any = FormGroup;
+    serverErrorMessage: string = '';
     constructor(
         private formBuilder: FormBuilder,
+        private router: Router,
         private loginService: LoginService,
     ) {
         this.loginForm = this.formBuilder.group({
@@ -27,7 +31,28 @@ export class LoginFormComponent {
             this.inputEmail(),
             this.inputPassword(),
         );
-        this.loginService.login(user);
+        this.loginService.login(user).subscribe(
+            (data) => {
+                let user: User = JSON.parse(String(data));
+                this.loginService.setTokenStorage(user);
+                this.loginService.setUserStorage(user);
+                this.router.navigate(['/landing', {}]);
+            },
+            (error) => {
+                if (error.status !== 400) {
+                    console.error('Server Error on register.');
+                    this.router.navigateByUrl('/login');
+                    return;
+                }
+                let errorJson = JSON.parse(error.error);
+
+                for (const [key, value] of Object.entries(errorJson)) {
+                    // @ts-ignore
+                    this.serverErrorMessage =
+                        'Please check the field ' + key + ': ' + value[0];
+                }
+            },
+        );
     }
 
     inputEmail() {
@@ -38,5 +63,9 @@ export class LoginFormComponent {
     }
     get formControls() {
         return this.loginForm.controls;
+    }
+
+    get errorMessage() {
+        return this.serverErrorMessage;
     }
 }
